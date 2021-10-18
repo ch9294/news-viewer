@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route} from "react-router-dom";
+import NewsPage from "./page/NewsPage";
+
+export const API_KEY = "f0e78fbb6f8a4e798791e3f653810aa3";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const [category, setCategory] = useState('all');
+    // const onSelect = useCallback(category => {
+    //     setCategory(category);
+    // }, []);
+
+    return (
+        <Route path='/:category?' component={NewsPage}/>
+    );
 }
 
 export default App;
